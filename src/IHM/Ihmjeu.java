@@ -162,7 +162,7 @@ public class Ihmjeu extends javax.swing.JFrame {
             }
         });
 
-        bUndo.setText("Précédant");
+        bUndo.setText("Précédent");
         bUndo.setEnabled(false);
         bUndo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

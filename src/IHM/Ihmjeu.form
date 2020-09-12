@@ -257,7 +257,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="bUndo">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Pr&#xe9;c&#xe9;dant"/>
+                <Property name="text" type="java.lang.String" value="Pr&#xe9;c&#xe9;dent"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
