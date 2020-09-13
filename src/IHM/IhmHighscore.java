@@ -19,6 +19,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class IhmHighscore extends javax.swing.JFrame {
 
+    HighScores h;
     /**
      * Creates new form IhmHighscore
      */
@@ -113,7 +114,8 @@ public class IhmHighscore extends javax.swing.JFrame {
 
     //Vérification du type de pérsistance utiliser et affichage des données dans la jTable
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        this.afficher(); 
+        this.chargerScores();
+        this.remplirTable();
     }//GEN-LAST:event_formWindowOpened
 
     /**
@@ -158,14 +160,7 @@ public class IhmHighscore extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     
     //Remplissage de la jTable
-    public void afficher(){
-        PersitKit p;
-        jLabel1.setText("Données charger avec "+Jeu.getInstance().getTypePersistance());
-        if(Jeu.getInstance().getTypePersistance().equals("Xml"))
-            p=new XmlKit();
-        else
-            p=new JdbcKit();
-        HighScores h = p.MakeKit();
+    public void remplirTable(){
         DefaultTableModel model= (DefaultTableModel)jTable1.getModel();
         Object [] row = new Object[3];
         for (int i = 0; i < h.getSize(); i++) {
@@ -174,6 +169,16 @@ public class IhmHighscore extends javax.swing.JFrame {
             row[2]=h.getEntree(i).getScore();
             model.addRow(row);
         }
+    }
+    
+    public void chargerScores(){
+        PersitKit p;
+        jLabel1.setText("Données charger avec "+Jeu.getInstance().getTypePersistance());
+        if(Jeu.getInstance().getTypePersistance().equals("Xml"))
+            p=new XmlKit();
+        else
+            p=new JdbcKit();
+        h = p.MakeKit();
     }
     
     //Définition de l'icone de la fenétre
