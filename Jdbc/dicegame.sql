@@ -18,6 +18,6 @@ DROP TABLE IF EXISTS `highscores`;
 CREATE TABLE `highscores` (
   `Id` int(10) unsigned NOT NULL auto_increment,
   `Nom` varchar(45) NOT NULL,
-  `Score` varchar(45) NOT NULL default '0',
+  `Score` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
