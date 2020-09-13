@@ -11,7 +11,7 @@ import Metier.HighScores;
  *
  * @author DEV
  */
-public class JdbcKit extends PersisKit{
+public class JdbcKit implements PersitKit{
      public JdbcKit() {
     }
     

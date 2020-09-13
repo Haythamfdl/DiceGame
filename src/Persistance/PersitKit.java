@@ -11,13 +11,8 @@ import Metier.HighScores;
  *
  * @author DEV
  */
-public abstract class PersisKit {
-    
-    public PersisKit(){
+public interface PersitKit {
         
-    }
-    
-    public HighScores MakeKit(){
-        return null;
-    }
+    public HighScores MakeKit();
+      
 }

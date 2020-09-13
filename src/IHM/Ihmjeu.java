@@ -11,7 +11,7 @@ import Metier.HighScores;
 import Metier.Jeu;
 import Metier.Joueur;
 import Persistance.JdbcKit;
-import Persistance.PersisKit;
+import Persistance.PersitKit;
 import Persistance.XmlKit;
 import Utilities.CareTaker;
 import Utilities.Memento;
@@ -333,7 +333,7 @@ public class Ihmjeu extends javax.swing.JFrame {
             if(l==10){
                 bLancer.setEnabled(false);
                 Entree e=new Entree(j.getNom(), j.getScore());                  //Création d'une nouvelle Entrée 
-                PersisKit p;
+                PersitKit p;
                 HighScores hs;
                 if(Jeu.getInstance().getTypePersistance().equals("Xml"))        //Vérification du type de pérsitance
                     p=new XmlKit();

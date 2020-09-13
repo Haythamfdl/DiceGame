@@ -8,7 +8,7 @@ package IHM;
 import Metier.HighScores;
 import Metier.Jeu;
 import Persistance.JdbcKit;
-import Persistance.PersisKit;
+import Persistance.PersitKit;
 import Persistance.XmlKit;
 import java.awt.Toolkit;
 import javax.swing.table.DefaultTableModel;
@@ -159,7 +159,7 @@ public class IhmHighscore extends javax.swing.JFrame {
     
     //Remplissage de la jTable
     public void afficher(){
-        PersisKit p;
+        PersitKit p;
         jLabel1.setText("Données charger avec "+Jeu.getInstance().getTypePersistance());
         if(Jeu.getInstance().getTypePersistance().equals("Xml"))
             p=new XmlKit();

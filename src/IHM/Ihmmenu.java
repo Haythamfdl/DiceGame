@@ -9,7 +9,7 @@ import Metier.HighScores;
 import Metier.Jeu;
 import Metier.Joueur;
 import Persistance.JdbcKit;
-import Persistance.PersisKit;
+import Persistance.PersitKit;
 import Persistance.XmlKit;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
@@ -125,7 +125,7 @@ public class Ihmmenu extends javax.swing.JFrame {
 
     //Ouvrir la fenétre des Highscores
     private void bHighscoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bHighscoresActionPerformed
-        PersisKit p;
+        PersitKit p;
         if(Jeu.getInstance().getTypePersistance().equals("Xml"))
             p=new XmlKit();
         else

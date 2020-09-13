@@ -11,7 +11,7 @@ import Metier.HighScores;
  *
  * @author DEV
  */
-public class XmlKit extends PersisKit{
+public class XmlKit implements PersitKit{
 
     public XmlKit() {
     }
