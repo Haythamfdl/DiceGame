@@ -70,4 +70,14 @@
     nbproject/build-impl.xml file. 
 
     -->
+    <!-- Création d'un JAR unique contenant les librairies externe -->
+    <target name="-post-jar">
+    <jar jarfile="dist/DiceGame.jar">                       
+        <zipfileset src="${dist.jar}" excludes="META-INF/*" />  
+        <zipfileset src="lib/mysql-connector-java.jar" excludes="META-INF/*" />
+        <manifest>
+            <attribute name="Main-Class" value="IHM.Ihmmenu" /> 
+        </manifest>
+    </jar>
+</target> 
 </project>
